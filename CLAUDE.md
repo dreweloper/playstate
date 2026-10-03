@@ -46,7 +46,7 @@ pnpm --filter @playstate/core test   # a single package
 
 ## Workflow
 
-Each task follows this cycle:
+Each task follows this cycle. The project skills implement parts of it: `/start-task <issue>` (run it in plan mode) covers **Start from an issue** and **Plan first**, `/adr <title>` records a decision, and `/done` covers **Close**, up to the commit and the pull request.
 
 1. **Start from an issue.** Read it, including its acceptance criteria and out-of-scope section. Work on a branch named after it, never on `main`.
 2. **Plan first.** Propose a plan and wait for approval before changing files. Mention alternatives you discarded and why.

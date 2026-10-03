@@ -48,6 +48,13 @@
 - Documentation recommends GitHub secret scanning with push protection.
 - In this repository: secret scanning with push protection enabled, and Claude Code denied access to `.env*` files.
 
+**Claude Code access to `.env*` files (this repository)**
+
+- `.claude/settings.json` denies `Read(**/.env*)` and `Edit(**/.env*)`, which covers `.env*` files at any depth (root and `packages/*`).
+- These rules apply to Claude Code's file tools, to file commands it recognizes in Bash (`cat`, `head`, `tail`, `sed`, `tee`) and to redirect targets (`< .env`, `> .env`).
+- **Known gap:** they do not apply to commands that read files without naming them (e.g. `grep -r pattern .`), to `source .env`, or to scripts that open files themselves (e.g. `node`, `python`). `CLAUDE.md` forbids reading `.env*` files, but that is an instruction, not an enforced boundary.
+- **Optional hardening:** enabling Claude Code's sandbox (`/sandbox`; requires `bubblewrap` and `socat` on Linux/WSL2) applies the same deny rules to every shell command at the OS level. It is not enabled in the shared settings because it requires system packages and a network allowlist for every contributor.
+
 ### 3.3 Refresh token compromise
 
 **Threat:** an attacker obtains a developer's refresh token (and client secret).
@@ -143,6 +150,7 @@
 | Bundle boundary check on `react` output | 3.1 | CI |
 | Lint rule on imports from `core` | 3.1 | Local and CI |
 | Secret scanning with push protection | 3.2 | GitHub |
+| Claude Code deny rules on `.env*` files | 3.2 | Local (`.claude/settings.json`) |
 | Tests for `state` validation and loopback binding | 3.5 | CI |
 | Tests for data minimization and error bodies | 3.4 | CI |
 | Tests for `Vary: Origin` and CORS defaults | 3.7 | CI |
