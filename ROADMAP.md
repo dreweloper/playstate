@@ -25,13 +25,13 @@
 
 **Deliverables**
 
-- Design documents: `ARCHITECTURE.md`, ADRs 0001–0010, `ROADMAP.md`, `CONVENTIONS.md`, `SECURITY-MODEL.md`, `ideas-v2.md`.
+- Design documents: `ARCHITECTURE.md`, ADRs 0001–0011, `ROADMAP.md`, `CONVENTIONS.md`, `SECURITY-MODEL.md`, `ideas-v2.md`.
 - npm organization `@playstate` (with 2FA) and repository `dreweloper/playstate`.
 - pnpm workspace with the four packages scaffolded (empty entry points).
 - Shared tooling: TypeScript (strict) base config, tsup, Vitest, ESLint + Prettier.
 - Changesets configured, with `core` and `react` as linked packages (ADR-0005).
 - GitHub Actions CI: lint, typecheck, test, build, `publint`, `@arethetypeswrong/cli`, with least-privilege workflow permissions and third-party actions pinned to commit SHAs.
-- GitHub security settings: branch protection on `main`, secret scanning with push protection, private vulnerability reporting, 2FA.
+- GitHub security settings: branch ruleset on `main` with no bypass, secret scanning with push protection, private vulnerability reporting, 2FA.
 - GitHub setup: milestones per phase, project board, issue and PR templates, labels.
 - License file (MIT).
 - Claude Code setup: `CLAUDE.md` (root and per package), custom commands (`/start-task`, `/adr`, `/done`), subagents (`code-reviewer`, `security-reviewer`, `docs-writer`) and `settings.json` (with `.env*` files denied).
@@ -40,8 +40,8 @@
 
 - [x] Design documents for architecture and decisions written (`ARCHITECTURE.md`, ADRs).
 - [x] npm organization created and secured with 2FA.
-- [ ] Remaining design documents written.
-- [ ] Repository created; first commit contains only documentation.
+- [x] Remaining design documents written.
+- [x] Repository created; first commit contains only documentation.
 - [ ] `pnpm build`, `pnpm test`, `pnpm lint` and `pnpm typecheck` pass locally and in CI on the empty packages.
 - [ ] Milestones, board and templates ready; Phase 1 issues created.
 - [ ] One full task cycle completed with Claude Code (`/start-task` → `/done` → merged PR).

@@ -28,7 +28,7 @@ Read when relevant:
 pnpm install
 pnpm build          # all packages
 pnpm test           # all packages, with coverage
-pnpm lint           # ESLint + Stylelint
+pnpm lint           # ESLint (+ Stylelint from Phase 4)
 pnpm typecheck
 pnpm changeset      # add a changeset for published packages
 
