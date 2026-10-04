@@ -45,6 +45,11 @@ Every issue includes:
 - **Acceptance criteria:** verifiable conditions that define "done".
 - **Out of scope:** what this issue deliberately does not cover.
 
+These sections are required before work on an issue starts. Bug reports are opened without them and receive them during triage.
+
+- **On GitHub's web interface,** issues are opened through the issue forms in `.github/ISSUE_TEMPLATE/`, which enforce these sections and apply the type label.
+- **With `gh issue create`,** which ignores issue forms, the issue body must include the same sections and the type label must be added explicitly (`--label`).
+
 **Labels**
 
 - Type: `feature`, `bug`, `docs`, `chore`.
@@ -107,13 +112,14 @@ Applies to the styled components of `@playstate/react` (ADR-0011).
 
 ## 8. Documentation
 
-| When… | Update… |
-|---|---|
-| The system's structure or behavior changes | `ARCHITECTURE.md` |
-| A significant decision is made or reversed | A new ADR |
-| The public API changes | Package README and JSDoc |
-| A phase's status changes | `ROADMAP.md` |
-| An idea is accepted but outside v1 | `ideas-v2.md` |
+| When…                                       | Update…                                    |
+| ------------------------------------------- | ------------------------------------------ |
+| The system's structure or behavior changes  | `ARCHITECTURE.md`                          |
+| A significant decision is made or reversed  | A new ADR                                  |
+| The public API changes                      | Package README and JSDoc                   |
+| A phase's status changes                    | `ROADMAP.md`                               |
+| An idea is accepted but outside v1          | `ideas-v2.md`                              |
+| The Definition of Done (section 11) changes | `.github/pull_request_template.md` as well |
 
 **ADR process**
 
