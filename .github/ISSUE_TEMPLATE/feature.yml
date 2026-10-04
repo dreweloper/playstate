@@ -1,0 +1,32 @@
+name: Feature
+description: Propose new functionality.
+labels: [feature]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the functionality and how to tell when it is done. Ideas outside the v1 scope ([ARCHITECTURE.md](https://github.com/dreweloper/playstate/blob/main/ARCHITECTURE.md)) are collected in [ideas-v2.md](https://github.com/dreweloper/playstate/blob/main/ideas-v2.md) and are not implemented in v1.
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Why is this needed?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance criteria
+      description: Verifiable conditions that define "done".
+      placeholder: |
+        - [ ] First verifiable condition
+        - [ ] Second verifiable condition
+    validations:
+      required: true
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out of scope
+      description: What this issue deliberately does not cover.
+    validations:
+      required: true

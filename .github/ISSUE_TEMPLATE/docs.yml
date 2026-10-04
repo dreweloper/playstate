@@ -1,0 +1,32 @@
+name: Documentation
+description: Add or improve documentation.
+labels: [docs]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe what documentation is missing or wrong and how to tell when it is fixed.
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Why is this needed?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance criteria
+      description: Verifiable conditions that define "done".
+      placeholder: |
+        - [ ] First verifiable condition
+        - [ ] Second verifiable condition
+    validations:
+      required: true
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out of scope
+      description: What this issue deliberately does not cover.
+    validations:
+      required: true

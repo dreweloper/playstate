@@ -1,0 +1,80 @@
+name: Bug report
+description: Report something that is not working.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Security issues must not be reported here.** Use [private vulnerability reporting](https://github.com/dreweloper/playstate/security/advisories/new) instead.
+
+        Never include tokens, client secrets or the contents of `.env` files in this report.
+
+        Acceptance criteria and out of scope are added during triage.
+  - type: dropdown
+    id: package
+    attributes:
+      label: Affected package
+      options:
+        - "@playstate/core"
+        - "@playstate/server"
+        - "@playstate/cli"
+        - "@playstate/react"
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Package version
+      placeholder: e.g. 0.1.0
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      description: Where the server is deployed, or where the CLI was run. If "Other", give details in the steps to reproduce.
+      options:
+        - Vercel
+        - Netlify
+        - Local machine (CLI or development server)
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: node-version
+    attributes:
+      label: Node.js version
+      placeholder: e.g. 24.0.0
+    validations:
+      required: true
+  - type: input
+    id: react-version
+    attributes:
+      label: React version
+      description: Only if using `@playstate/react`.
+      placeholder: e.g. 19.0.0
+    validations:
+      required: false
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. First step
+        2. Second step
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: Include error messages or HTTP status codes. Remove any tokens or secrets first.
+    validations:
+      required: true
