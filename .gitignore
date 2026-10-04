@@ -1,3 +1,6 @@
 # Claude Code personal files
 .claude/settings.local.json
 CLAUDE.local.md
+
+# Environment files (may contain Spotify credentials)
+.env*
