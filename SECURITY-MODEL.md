@@ -46,7 +46,7 @@
 - The CLI writes credentials to `.env.local` and warns when the file is not git-ignored.
 - Examples ship with a `.gitignore` that excludes `.env*` files.
 - Documentation recommends GitHub secret scanning with push protection.
-- In this repository: secret scanning with push protection enabled, and Claude Code denied access to `.env*` files.
+- In this repository: the root `.gitignore` excludes `.env*` files at any depth, secret scanning with push protection is enabled, and Claude Code is denied access to `.env*` files.
 
 **Claude Code access to `.env*` files (this repository)**
 
