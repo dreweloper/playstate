@@ -53,7 +53,13 @@ If any item is ❌, stop here and propose how to fix it.
   - **If it does not exist:** continue below.
 - Title: Conventional Commits, since the squash merge turns it into the commit on `main`.
 - Body: if `.github/pull_request_template.md` exists, follow it. Otherwise include a summary of the changes, `Closes #<issue-number>`, and how each acceptance criterion was verified.
+- Definition of Done checklist in the body, matching the report from step 1:
+  - Verified items are checked: `- [x] <item>`.
+  - Items that could not be verified (e.g. a skipped check) stay unchecked: `- [ ] <item> — Skipped: <reason>`.
+  - Items that do not apply are checked: `- [x] <item> — N/A: <reason>`.
+  - Review and CI stay unchecked: they are pending until the pull request is open.
 - Show the title and body, then **stop and ask for explicit confirmation** before running `git push -u origin <branch>` and `gh pr create`. Do not push or open the pull request without it.
+- After confirmation, write the body to a temporary file outside the repository (created with `mktemp`) and run `gh pr create --title "<title>" --body-file <file>`. Write the file with a quoted heredoc delimiter (`<<'EOF'`) so the shell does not expand backticks or `$` in the body. Never pass the body inline with `--body`: the shell executes the backticks in it.
 - If the branch adds or modifies an ADR with `- **Status:** Proposed`, end your response with this reminder: the status must change to `Accepted` in this same pull request, as the last commit before merging, because merged ADRs cannot be edited.
 
 ### No attribution

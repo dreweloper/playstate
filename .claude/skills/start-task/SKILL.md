@@ -49,4 +49,5 @@ Follow the task cycle in `CLAUDE.md`. Planning happens in plan mode, so it stays
    - If the working tree is not clean, stop and ask.
    - If the branch already exists, `git switch <branch>`.
    - Otherwise, `git fetch origin` and then `git switch -c <branch> origin/main`.
+   - Do not change the branch's upstream tracking (no `git branch --unset-upstream` or `--set-upstream-to`): `/done` sets it with `git push -u`.
    - Then implement the plan in small steps.
