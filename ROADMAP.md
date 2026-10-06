@@ -44,7 +44,7 @@
 - [x] Repository created; first commit contains only documentation.
 - [ ] `pnpm build`, `pnpm test`, `pnpm lint` and `pnpm typecheck` pass locally and in CI on the empty packages.
 - [ ] Milestones, board and templates ready; Phase 1 issues created.
-- [ ] One full task cycle completed with Claude Code (`/start-task` → `/done` → merged PR).
+- [x] One full task cycle completed with Claude Code (`/start-task` → `/done` → merged PR): #15.
 
 ---
 

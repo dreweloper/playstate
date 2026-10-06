@@ -216,7 +216,7 @@ Summary (full threat model in `SECURITY-MODEL.md`):
 ## 10. Platform support
 
 - **Deployment targets (v1):** Vercel and Netlify, both documented, with examples and verified caching behavior. The handler is web-standard and may run on other runtimes, but they are not officially supported in v1.
-- **Server runtime:** Node ≥ 22 (supported LTS lines). Development uses the active LTS (Node 24), pinned in `.nvmrc`.
+- **Server runtime:** Node ≥ 22 (supported LTS lines). Development uses an LTS line (currently Node 24), pinned in `.nvmrc`.
 - **React package:** React ≥ 18; compatible with React Server Components frameworks as a client component.
 - **Output:** ESM and CJS with TypeScript declarations.
 
