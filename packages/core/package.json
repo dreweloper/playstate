@@ -1,0 +1,14 @@
+{
+  "name": "@playstate/core",
+  "version": "0.0.0",
+  "description": "Spotify client that normalizes playback data into the playstate NowPlaying model",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dreweloper/playstate.git",
+    "directory": "packages/core"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

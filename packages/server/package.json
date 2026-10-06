@@ -1,0 +1,17 @@
+{
+  "name": "@playstate/server",
+  "version": "0.0.0",
+  "description": "Web-standard HTTP handler that serves what you are playing on Spotify",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dreweloper/playstate.git",
+    "directory": "packages/server"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@playstate/core": "workspace:*"
+  }
+}

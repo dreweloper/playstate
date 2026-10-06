@@ -1,0 +1,14 @@
+{
+  "name": "@playstate/react",
+  "version": "0.0.0",
+  "description": "React hook and components to show what you are playing on Spotify",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dreweloper/playstate.git",
+    "directory": "packages/react"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  }
+}

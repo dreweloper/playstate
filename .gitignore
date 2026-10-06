@@ -4,3 +4,13 @@ CLAUDE.local.md
 
 # Environment files (may contain Spotify credentials)
 .env*
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+*.tsbuildinfo
+
+# Coverage reports
+coverage/

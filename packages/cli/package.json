@@ -1,0 +1,14 @@
+{
+  "name": "@playstate/cli",
+  "version": "0.0.0",
+  "description": "One-time setup to obtain a Spotify refresh token for playstate",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dreweloper/playstate.git",
+    "directory": "packages/cli"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
