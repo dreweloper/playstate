@@ -1,6 +1,6 @@
 # playstate
 
-**Now Playing widget for Spotify** — a self-hosted, typed, zero-dependency toolkit to show what you're listening to on your own website.
+**Now Playing widget for Spotify** — a self-hosted, typed toolkit to show what you're listening to on your own website. Its library packages have no third-party runtime dependencies.
 
 > 🚧 **Work in progress.** playstate is in its design and foundation phase. Nothing is published on npm yet.
 

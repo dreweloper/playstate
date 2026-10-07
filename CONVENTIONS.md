@@ -143,7 +143,14 @@ Applies to the styled components of `@playstate/react` (ADR-0011).
 
 ## 10. Dependencies
 
-- Runtime dependencies follow ADR-0004: none in library packages; a minimal, documented set in the CLI.
+- Runtime dependencies follow ADR-0012. Library packages have no third-party runtime dependencies; the only internal one is `@playstate/server` → `@playstate/core`, and `@playstate/react` only has React as a peer dependency.
+- The CLI may only use the runtime dependencies listed below. Adding one that meets the ADR-0012 criteria means adding it to this list in the same pull request and explaining why in the description.
+
+  | Dependency       | Reason                                     |
+  | ---------------- | ------------------------------------------ |
+  | `@clack/prompts` | Interactive prompts for the OAuth setup    |
+  | `open`           | Opens the browser across operating systems |
+
 - New development dependencies are justified in the pull request description.
 - Dependency updates are automated (Renovate or Dependabot) and reviewed like any other change.
 

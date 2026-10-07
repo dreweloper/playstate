@@ -38,7 +38,7 @@ pnpm --filter @playstate/core test   # a single package
 ## Non-negotiable rules
 
 - `react` never imports runtime code from `core` or `server`: only `import type` from `core` (ADR-0005).
-- No runtime dependencies in `core`, `server` or `react`. The CLI only uses the dependencies listed in ADR-0004.
+- No third-party runtime dependencies in `core`, `server` or `react` (`server` may depend on `core`). The CLI only uses the dependencies listed in CONVENTIONS §10.
 - `core` always returns the `NowPlaying` model, never `null` (ARCHITECTURE section 5).
 - HTTP in tests is mocked with MSW. Never call real APIs in automated tests.
 - Never read, print or modify `.env*` files. Never log tokens or secrets.

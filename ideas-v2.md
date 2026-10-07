@@ -34,7 +34,7 @@ Notify consumers when data is older than expected (e.g. a `STALE_DATA` error or 
 
 Validate Spotify responses at runtime (e.g. with Valibot) instead of relying on hand-written types only.
 
-- **Deferred because:** adds a runtime dependency (ADR-0004); hand-written types and tests cover v1.
+- **Deferred because:** adds a runtime dependency (ADR-0012); hand-written types and tests cover v1.
 
 ### Injectable `fetch` in `core`
 

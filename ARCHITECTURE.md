@@ -9,7 +9,7 @@
 
 It has two goals:
 
-1. **Library:** a typed, tested, zero-runtime-dependency toolkit that any developer can self-host in minutes.
+1. **Library:** a typed, tested toolkit that any developer can self-host in minutes. Its library packages have no third-party runtime dependencies.
 2. **Portfolio:** a showcase of architecture, developer experience and engineering practices.
 
 ### Non-goals (v1)
@@ -130,7 +130,7 @@ cli               (independent)
 
 - **`react` must never import runtime code from `core` or `server`.** This guarantees that secrets and server logic cannot reach the browser bundle. Enforced in CI by a check that fails if the `react` build output contains `accounts.spotify.com` or `client_secret`.
 - The types `react` uses from `core` are inlined into its declaration files at build time, so consumers of `react` do not install `core`.
-- Library packages (`core`, `server`, `react`) have **zero runtime dependencies** (React as peer dependency is the only exception). The CLI may use a minimal, documented set of dependencies (ADR-0004).
+- Library packages (`core`, `server`, `react`) have **no third-party runtime dependencies**. The only internal runtime dependency is `server` → `core`; `react` has none (React is its only peer dependency, and `core` types are inlined at build time). The CLI may use a minimal set of dependencies, listed in `CONVENTIONS.md` section 10 (ADR-0012).
 
 ## 5. Data model
 
@@ -229,7 +229,7 @@ pnpm workspaces · TypeScript (strict) · tsup · Vitest · MSW · React Testing
 - ADR-0001 — Package naming and Spotify branding
 - ADR-0002 — Monorepo with four packages
 - ADR-0003 — Web-standard `Request`/`Response` handler
-- ADR-0004 — Zero runtime dependencies
+- ADR-0004 — Zero runtime dependencies (superseded by ADR-0012)
 - ADR-0005 — Types from `core` inlined into `react` at build time
 - ADR-0006 — CDN caching strategy
 - ADR-0007 — Custom polling instead of TanStack Query/SWR
@@ -237,6 +237,7 @@ pnpm workspaces · TypeScript (strict) · tsup · Vitest · MSW · React Testing
 - ADR-0009 — v1 deployment targets: Vercel and Netlify
 - ADR-0010 — Namespace exports for headless components
 - ADR-0011 — CSS Modules for styled components
+- ADR-0012 — No third-party runtime dependencies
 
 ## 13. Pending and deferred
 
