@@ -1,7 +1,7 @@
 # playstate — Security Model
 
 > Internal threat model: what we protect, from what, and how. The public, user-facing summary will live in `SECURITY.md` (Phase 5).
-> Related: `ARCHITECTURE.md` (section 9), ADR-0004, ADR-0005, ADR-0008.
+> Related: `ARCHITECTURE.md` (section 9), ADR-0005, ADR-0008, ADR-0012.
 
 ## 1. Assets
 
@@ -119,7 +119,7 @@
 
 **Mitigations**
 
-- Zero runtime dependencies in library packages; a minimal, documented set in the CLI (ADR-0004).
+- No third-party runtime dependencies in library packages; the only internal one is `server` → `core`. A minimal set in the CLI, listed in `CONVENTIONS.md` section 10 (ADR-0012).
 - Lockfile committed; dependency updates automated and reviewed.
 - Packages published only from CI, with npm provenance, so consumers can verify each version was built from this repository.
 - 2FA on npm and GitHub; branch protection on `main`.
@@ -155,5 +155,5 @@
 | Tests for data minimization and error bodies | 3.4 | CI |
 | Tests for `Vary: Origin` and CORS defaults | 3.7 | CI |
 | Tests for URL scheme validation | 3.8 | CI |
-| Runtime dependency check on library packages | 3.9 | CI |
+| Runtime dependency check on library packages (no third-party; internal only `server` → `core`) | 3.9 | CI |
 | `publint`, `@arethetypeswrong/cli`, npm provenance | 3.9 | CI |

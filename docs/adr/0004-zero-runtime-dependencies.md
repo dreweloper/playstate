@@ -1,6 +1,6 @@
 # ADR-0004: Zero runtime dependencies
 
-- **Status:** Accepted
+- **Status:** Superseded by ADR-0012
 - **Date:** 2026-10-02
 
 ## Context

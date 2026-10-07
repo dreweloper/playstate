@@ -25,7 +25,7 @@
 
 **Deliverables**
 
-- Design documents: `ARCHITECTURE.md`, ADRs 0001–0011, `ROADMAP.md`, `CONVENTIONS.md`, `SECURITY-MODEL.md`, `ideas-v2.md`.
+- Design documents: `ARCHITECTURE.md`, ADRs 0001–0012, `ROADMAP.md`, `CONVENTIONS.md`, `SECURITY-MODEL.md`, `ideas-v2.md`.
 - npm organization `@playstate` (with 2FA) and repository `dreweloper/playstate`.
 - pnpm workspace with the four packages scaffolded (empty entry points).
 - Shared tooling: TypeScript (strict) base config, tsup, Vitest, ESLint + Prettier.
@@ -87,7 +87,7 @@
 - [ ] A real refresh token is obtained by running the CLI locally.
 - [ ] That token works with `@playstate/core` against the real Spotify API (manual check script).
 - [ ] Coverage at or above the minimum threshold.
-- [ ] CLI dependencies limited to those listed in ADR-0004.
+- [ ] CLI dependencies limited to those listed in `CONVENTIONS.md` section 10.
 
 ---
 
