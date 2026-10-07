@@ -1,6 +1,6 @@
 # ADR-0012: No third-party runtime dependencies
 
-- **Status:** Proposed
+- **Status:** Accepted
 - **Date:** 2026-10-07
 
 ## Context
