@@ -218,11 +218,11 @@ Summary (full threat model in `SECURITY-MODEL.md`):
 - **Deployment targets (v1):** Vercel and Netlify, both documented, with examples and verified caching behavior. The handler is web-standard and may run on other runtimes, but they are not officially supported in v1.
 - **Server runtime:** Node ≥ 22 (supported LTS lines). Development uses an LTS line (currently Node 24), pinned in `.nvmrc`.
 - **React package:** React ≥ 18; compatible with React Server Components frameworks as a client component.
-- **Output:** ESM and CJS with TypeScript declarations.
+- **Output:** library packages (`core`, `server`, `react`): ESM and CJS with TypeScript declarations. `cli`: ESM only, since it is run as a `bin` through `npx` and is never imported.
 
 ## 11. Tooling
 
-pnpm workspaces · TypeScript (strict) · tsup · Vitest · MSW · React Testing Library · Storybook · CSS Modules · ESLint + Prettier · Stylelint · Changesets · GitHub Actions · publint · @arethetypeswrong/cli
+pnpm workspaces · TypeScript (strict) · tsdown · Vitest · MSW · React Testing Library · Storybook · CSS Modules · ESLint + Prettier · Stylelint · Changesets · GitHub Actions · publint · @arethetypeswrong/cli
 
 ## 12. Related decisions
 

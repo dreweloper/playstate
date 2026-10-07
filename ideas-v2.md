@@ -90,3 +90,11 @@ Turborepo or Nx for cached, dependency-aware tasks in the monorepo.
 
 - **Origin:** ADR-0002.
 - **Deferred because:** unnecessary overhead for four packages.
+
+### Migrate to TypeScript 7
+
+Move the workspace from TypeScript 6.0 to TypeScript 7 (the native compiler).
+
+- **Origin:** issue #5.
+- **Deferred because:** typescript-eslint declares `typescript <6.1.0` as peer and TS 7 support in the toolchain is not confirmed.
+- **Revisit when:** typescript-eslint's peer includes TS 7 and tsdown with `dts` generates correct declarations, validated with publint and @arethetypeswrong/cli on the `react` build (ADR-0005).

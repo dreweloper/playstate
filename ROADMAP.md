@@ -28,7 +28,7 @@
 - Design documents: `ARCHITECTURE.md`, ADRs 0001–0012, `ROADMAP.md`, `CONVENTIONS.md`, `SECURITY-MODEL.md`, `ideas-v2.md`.
 - npm organization `@playstate` (with 2FA) and repository `dreweloper/playstate`.
 - pnpm workspace with the four packages scaffolded (empty entry points).
-- Shared tooling: TypeScript (strict) base config, tsup, Vitest, ESLint + Prettier.
+- Shared tooling: TypeScript (strict) base config, tsdown, Vitest, ESLint + Prettier.
 - Changesets configured, with `core` and `react` as linked packages (ADR-0005).
 - GitHub Actions CI: lint, typecheck, test, build, `publint`, `@arethetypeswrong/cli`, with least-privilege workflow permissions and third-party actions pinned to commit SHAs.
 - GitHub security settings: branch ruleset on `main` with no bypass, secret scanning with push protection, private vulnerability reporting, 2FA.
