@@ -5,3 +5,7 @@ Spotify client: refreshes the access token, calls the Spotify Web API and normal
 **Runs in:** the server (Node ≥ 22).
 
 Folder structure is added in this package's phase (Phase 1).
+
+## TypeScript
+
+The base config sets `"types": []`. Adding `@types/node` requires `"types": ["node"]` in this package's `tsconfig.json`.

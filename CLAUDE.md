@@ -30,6 +30,7 @@ pnpm build          # all packages
 pnpm test           # all packages, with coverage
 pnpm lint           # ESLint (+ Stylelint from Phase 4)
 pnpm typecheck
+pnpm check:package  # publint + @arethetypeswrong/cli on the built packages
 pnpm changeset      # add a changeset for published packages
 
 pnpm --filter @playstate/core test   # a single package
