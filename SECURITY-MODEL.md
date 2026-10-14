@@ -5,14 +5,14 @@
 
 ## 1. Assets
 
-| Asset | Where it lives | Sensitivity |
-|---|---|---|
-| Spotify client secret | Developer's deployment environment variables | High |
-| Spotify refresh token | Developer's deployment environment variables | High |
-| Spotify access token | Memory of the serverless instance (≤ 1 hour) | Medium (short-lived) |
-| Listening activity | Endpoint responses, CDN cache, browsers | Public by design |
-| npm publishing rights | `@playstate` npm organization, CI | High |
-| Repository and CI | GitHub `dreweloper/playstate` | High |
+| Asset                 | Where it lives                               | Sensitivity          |
+| --------------------- | -------------------------------------------- | -------------------- |
+| Spotify client secret | Developer's deployment environment variables | High                 |
+| Spotify refresh token | Developer's deployment environment variables | High                 |
+| Spotify access token  | Memory of the serverless instance (≤ 1 hour) | Medium (short-lived) |
+| Listening activity    | Endpoint responses, CDN cache, browsers      | Public by design     |
+| npm publishing rights | `@playstate` npm organization, CI            | High                 |
+| Repository and CI     | GitHub `dreweloper/playstate`                | High                 |
 
 ## 2. Trust boundaries
 
@@ -145,15 +145,15 @@
 
 ## 6. Automated verification
 
-| Check | Protects against | Where |
-|---|---|---|
-| Bundle boundary check on `react` output | 3.1 | CI |
-| Lint rule on imports from `core` | 3.1 | Local and CI |
-| Secret scanning with push protection | 3.2 | GitHub |
-| Claude Code deny rules on `.env*` files | 3.2 | Local (`.claude/settings.json`) |
-| Tests for `state` validation and loopback binding | 3.5 | CI |
-| Tests for data minimization and error bodies | 3.4 | CI |
-| Tests for `Vary: Origin` and CORS defaults | 3.7 | CI |
-| Tests for URL scheme validation | 3.8 | CI |
-| Runtime dependency check on library packages (no third-party; internal only `server` → `core`) | 3.9 | CI |
-| `publint`, `@arethetypeswrong/cli`, npm provenance | 3.9 | CI |
+| Check                                                                                          | Protects against | Where                           |
+| ---------------------------------------------------------------------------------------------- | ---------------- | ------------------------------- |
+| Bundle boundary check on `react` output                                                        | 3.1              | CI                              |
+| Lint rule on imports from `core`                                                               | 3.1              | Local and CI                    |
+| Secret scanning with push protection                                                           | 3.2              | GitHub                          |
+| Claude Code deny rules on `.env*` files                                                        | 3.2              | Local (`.claude/settings.json`) |
+| Tests for `state` validation and loopback binding                                              | 3.5              | CI                              |
+| Tests for data minimization and error bodies                                                   | 3.4              | CI                              |
+| Tests for `Vary: Origin` and CORS defaults                                                     | 3.7              | CI                              |
+| Tests for URL scheme validation                                                                | 3.8              | CI                              |
+| Runtime dependency check on library packages (no third-party; internal only `server` → `core`) | 3.9              | CI                              |
+| `publint`, `@arethetypeswrong/cli`, npm provenance                                             | 3.9              | CI                              |

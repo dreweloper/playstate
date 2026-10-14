@@ -44,12 +44,12 @@ flowchart LR
 
 ## 3. Packages
 
-| Package | Responsibility | Runs in | Published |
-|---|---|---|---|
-| `@playstate/core` | Token refresh, Spotify API calls, normalization into the `NowPlaying` model | Server | Yes |
-| `@playstate/server` | Web-standard HTTP handler: caching, CORS, error mapping, rate-limit protection | Server | Yes |
-| `@playstate/cli` | One-time OAuth flow to obtain a refresh token | Developer's machine | Yes, as an executable (`bin`) |
-| `@playstate/react` | `useNowPlaying` hook, headless components, styled card | Browser | Yes |
+| Package             | Responsibility                                                                 | Runs in             | Published                     |
+| ------------------- | ------------------------------------------------------------------------------ | ------------------- | ----------------------------- |
+| `@playstate/core`   | Token refresh, Spotify API calls, normalization into the `NowPlaying` model    | Server              | Yes                           |
+| `@playstate/server` | Web-standard HTTP handler: caching, CORS, error mapping, rate-limit protection | Server              | Yes                           |
+| `@playstate/cli`    | One-time OAuth flow to obtain a refresh token                                  | Developer's machine | Yes, as an executable (`bin`) |
+| `@playstate/react`  | `useNowPlaying` hook, headless components, styled card                         | Browser             | Yes                           |
 
 ### 3.1 `core`
 
@@ -165,23 +165,23 @@ A **usable item** is a track or an episode with an `item` object present. Reques
 
 Known cases, to be specified as acceptance criteria and tests in the corresponding issue:
 
-| Case | Expected |
-|---|---|
-| `200`, track or episode, `is_playing: true` | `playing` |
-| `200`, track or episode, `is_playing: false` | `paused` |
-| `200`, `item: null` (regardless of `is_playing`) | Fallback |
-| `200`, `currently_playing_type: "ad"` or `"unknown"` | Fallback |
-| `200`, local file (`is_local: true`) | `playing`/`paused` with `imageUrl` and `url` set to `null` |
-| `204` (no content) | Fallback |
+| Case                                                 | Expected                                                   |
+| ---------------------------------------------------- | ---------------------------------------------------------- |
+| `200`, track or episode, `is_playing: true`          | `playing`                                                  |
+| `200`, track or episode, `is_playing: false`         | `paused`                                                   |
+| `200`, `item: null` (regardless of `is_playing`)     | Fallback                                                   |
+| `200`, `currently_playing_type: "ad"` or `"unknown"` | Fallback                                                   |
+| `200`, local file (`is_local: true`)                 | `playing`/`paused` with `imageUrl` and `url` set to `null` |
+| `204` (no content)                                   | Fallback                                                   |
 
 ## 7. Error model
 
-| Error (`core`) | Cause | `server` response |
-|---|---|---|
-| `ConfigError` | Missing or invalid configuration | `500` |
-| `AuthError` | Refresh token invalid or revoked | `502` |
-| `RateLimitError` | Spotify `429`; carries `retryAfter` (seconds) | `503` + `Retry-After` |
-| `SpotifyApiError` | Other non-OK upstream responses (e.g. `5xx`) | `502` |
+| Error (`core`)    | Cause                                         | `server` response     |
+| ----------------- | --------------------------------------------- | --------------------- |
+| `ConfigError`     | Missing or invalid configuration              | `500`                 |
+| `AuthError`       | Refresh token invalid or revoked              | `502`                 |
+| `RateLimitError`  | Spotify `429`; carries `retryAfter` (seconds) | `503` + `Retry-After` |
+| `SpotifyApiError` | Other non-OK upstream responses (e.g. `5xx`)  | `502`                 |
 
 - Error responses never include secrets or raw upstream bodies.
 - Error responses are not cached, **except rate limiting** (below).
