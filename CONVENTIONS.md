@@ -61,7 +61,7 @@ Each issue belongs to the milestone of its phase (`ROADMAP.md`).
 ## 5. Code style
 
 - TypeScript in strict mode. No `any`: use `unknown` and narrow it.
-- Named exports only; no default exports.
+- Named exports only; no default exports. The only exception is tool configuration files whose tool requires a default export (`eslint.config.mjs`, `prettier.config.mjs`, `vitest.config.ts`…), enforced by the ESLint config.
 - Explicit return types on exported functions.
 - **File and folder names:**
   - React component files use `PascalCase`, matching the component they export, together with their tests and styles: `NowPlayingCard.tsx`, `NowPlayingCard.test.tsx`, `NowPlayingCard.module.css`.
@@ -125,7 +125,7 @@ Applies to the styled components of `@playstate/react` (ADR-0011).
 
 - New ADRs start from `docs/adr/template.md`, numbered sequentially.
 - An ADR is proposed in the same pull request as the change it justifies (`Status: Proposed`) and becomes `Accepted` when merged.
-- Accepted ADRs are never edited. To change a decision, write a new ADR and mark the old one as `Superseded by ADR-XXXX`.
+- Accepted ADRs are never edited. To change a decision, write a new ADR and mark the old one as `Superseded by ADR-XXXX`. The only permitted change to an accepted ADR is mechanical formatting by Prettier that does not alter its content.
 
 ## 9. Versioning and releases
 

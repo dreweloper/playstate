@@ -61,6 +61,8 @@
       "Bash(pnpm build *)",
       "Bash(pnpm test *)",
       "Bash(pnpm lint *)",
+      "Bash(pnpm format:check)",
+      "Bash(pnpm format:fix)",
       "Bash(pnpm typecheck *)",
       "Bash(pnpm --filter * build)",
       "Bash(pnpm --filter * build *)",
