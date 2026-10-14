@@ -15,10 +15,10 @@ body:
     attributes:
       label: Affected package
       options:
-        - "@playstate/core"
-        - "@playstate/server"
-        - "@playstate/cli"
-        - "@playstate/react"
+        - '@playstate/core'
+        - '@playstate/server'
+        - '@playstate/cli'
+        - '@playstate/react'
         - Not sure
     validations:
       required: true

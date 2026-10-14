@@ -29,6 +29,8 @@ pnpm install
 pnpm build          # all packages
 pnpm test           # all packages, with coverage
 pnpm lint           # ESLint (+ Stylelint from Phase 4)
+pnpm format:check   # Prettier, verify only
+pnpm format:fix     # Prettier, write changes
 pnpm typecheck
 pnpm check:package  # publint + @arethetypeswrong/cli on the built packages
 pnpm changeset      # add a changeset for published packages
@@ -62,7 +64,7 @@ Each task follows this cycle. The project skills implement parts of it: `/start-
 - Lower coverage thresholds, disable lint rules or skip tests to make CI pass.
 - Add dependencies (runtime or dev) without asking first.
 - Publish packages or push to `main`.
-- Use `any`, default exports or `dangerouslySetInnerHTML`.
+- Use `any`, default exports (except tool config files) or `dangerouslySetInnerHTML`.
 - Silently contradict the documentation. If a request conflicts with `ARCHITECTURE.md`, `CONVENTIONS.md` or an ADR, say so before proceeding.
 
 ## When in doubt

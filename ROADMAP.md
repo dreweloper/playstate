@@ -5,15 +5,15 @@
 
 **Status legend:** ⬜ Not started · 🟡 In progress · ✅ Done
 
-| Phase | Goal | Status |
-|---|---|---|
-| 0 | Foundation | 🟡 |
-| 1 | `@playstate/core` | ⬜ |
-| 2 | `@playstate/cli` | ⬜ |
-| 3 | `@playstate/server` | ⬜ |
-| 4 | `@playstate/react` | ⬜ |
-| 5 | First public release (`0.1.0`) | ⬜ |
-| 6 | Launch | ⬜ |
+| Phase | Goal                           | Status |
+| ----- | ------------------------------ | ------ |
+| 0     | Foundation                     | 🟡     |
+| 1     | `@playstate/core`              | ⬜     |
+| 2     | `@playstate/cli`               | ⬜     |
+| 3     | `@playstate/server`            | ⬜     |
+| 4     | `@playstate/react`             | ⬜     |
+| 5     | First public release (`0.1.0`) | ⬜     |
+| 6     | Launch                         | ⬜     |
 
 **Versioning note:** "v1" is the scope described in `ARCHITECTURE.md`. Packages are first published as `0.1.0` (Phase 5), signaling that the API may still change. `1.0.0` is released once the API has been validated in real use (see "After the first release").
 

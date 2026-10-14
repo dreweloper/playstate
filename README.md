@@ -6,12 +6,12 @@
 
 ## Packages
 
-| Package | Description |
-|---|---|
-| `@playstate/core` | Spotify client: token refresh and data normalization |
-| `@playstate/server` | Web-standard HTTP handler with caching and CORS |
-| `@playstate/cli` | One-command setup to obtain your Spotify refresh token |
-| `@playstate/react` | Hook, headless components and a styled card |
+| Package             | Description                                            |
+| ------------------- | ------------------------------------------------------ |
+| `@playstate/core`   | Spotify client: token refresh and data normalization   |
+| `@playstate/server` | Web-standard HTTP handler with caching and CORS        |
+| `@playstate/cli`    | One-command setup to obtain your Spotify refresh token |
+| `@playstate/react`  | Hook, headless components and a styled card            |
 
 ## Documentation
 
